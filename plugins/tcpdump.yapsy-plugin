@@ -1,0 +1,9 @@
+[Core]
+Name = TCPDump capture
+Module = tcpdump
+
+[Documentation]
+Author = Jordan Milne
+Version = 0.1
+Website = http://saynotolinux.com
+Description = Dissects a tcpdump capture file
