@@ -1,5 +1,8 @@
 *.py[cod]
 
+# IDEA project
+.idea
+
 # C extensions
 *.so
 
@@ -33,3 +36,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# PyQT's compiled resources
+*_rc.py

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# Copyright 2011 Jordan Milne
 
 from PyQt4 import Qt, QtCore, QtGui
 from qhexedit import QHexEdit
@@ -16,6 +17,7 @@ from format_dissector import FormatDissector
 
 import construct
 
+
 class MainWindow(QtGui.QMainWindow):
     """A configurable hex editor that supports binary templates and
     scripting through use of the construct library
@@ -23,7 +25,6 @@ class MainWindow(QtGui.QMainWindow):
     def __init__(self, file_name=None):
         """Initializer"""
         super(MainWindow, self).__init__()
-
 
         #Flag set to ignore the next data change event
         self._treeChangedData = False
@@ -70,9 +71,7 @@ class MainWindow(QtGui.QMainWindow):
         self._treeDissected = QTreeWidget()
         self._optionsDialog = OptionsDialog()
 
-
         self.__initUI()
-
 
         self.readSettings()
 
@@ -104,7 +103,7 @@ class MainWindow(QtGui.QMainWindow):
     def about(self):
         """Display an 'About' dialog box describing the application"""
         QtGui.QMessageBox.about(self, "About ParSlither",
-            "The HexEdit example is a short Demo of the QHexEdit Widget.")
+            "Parslither v0.1 (WIP)")
 
     def closeEvent(self, event): # pylint: disable-msg=W0613
         """(PyQT event handler) the application is due to close"""

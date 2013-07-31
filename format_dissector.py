@@ -3,6 +3,7 @@
 
 import construct
 
+
 class FormatDissector(object):
     
     name = ""

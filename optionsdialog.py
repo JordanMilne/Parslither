@@ -1,18 +1,17 @@
 #!/usr/bin/env python
+# Copyright 2011 Jordan Milne
 
-from PyQt4 import Qt, QtCore, QtGui # pylint: disable-msg=W0611
+from PyQt4 import Qt, QtCore, QtGui, uic # pylint: disable-msg=W0611
                                     # Qt NEEDS to be imported to appease pylint
 from PyQt4.QtGui import QColor, QFont, QPalette, QColorDialog, QFontDialog
 
-from Ui_optionsdialog import Ui_OptionsDialog
 
 class OptionsDialog(QtGui.QDialog):
     accepted = QtCore.pyqtSignal()
 
     def __init__(self):
         super(OptionsDialog, self).__init__()
-        self.ui = Ui_OptionsDialog()
-        self.ui.setupUi(self)
+        self.ui = uic.loadUi('optionsdialog.ui', self)
         
         self.readSettings()
         #make sure to write the settings, in case we used any defaults
