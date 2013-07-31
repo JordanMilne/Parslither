@@ -9,11 +9,11 @@ The code's a little dated (it's from 2011) and inefficient but it still works fi
 Pre-requisites
 ==============
 
-PyQt4
-Construct
-Yapsy
-Python-Magic
-qhexedit2
+* PyQt4
+* Construct
+* Yapsy
+* Python-Magic
+* qhexedit2
 
 Screenshot
 ==========
